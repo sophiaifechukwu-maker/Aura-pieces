@@ -71,3 +71,18 @@ header {
 .products, .events, .contact-info {
   padding: 20px;
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    font-size: 28px;
+  }
+}
