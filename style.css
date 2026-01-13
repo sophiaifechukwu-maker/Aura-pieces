@@ -96,3 +96,63 @@ nav ul li a.active {
         display: flex;
     }
 }
+/* Site background */
+body {
+    background-color: #ffe4ec; /* soft pink */
+    background-image: url('images/watermark.png'); /* jewelry watermark */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* watermark scaled nicely */
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure sections are readable on top of watermark */
+section {
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white overlay */
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(255, 182, 193, 0.95); /* light pink header */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Menu styling */
+nav {
+    background-color: rgba(255, 192, 203, 0.9); /* slightly darker pink */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Links */
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Menu hover effect */
+nav a:hover {
+    color: gold;
+}
+
+/* Footer example */
+footer {
+    background-color: rgba(255, 182, 193, 0.9);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
