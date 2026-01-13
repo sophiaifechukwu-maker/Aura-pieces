@@ -1,0 +1,229 @@
+/* =============================
+   RESET & BASIC STYLING
+============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fddde6; /* pinkish background */
+    background-image: url('images/watermark.jpg'); /* add your watermark image in images folder */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #000; /* default text color */
+    line-height: 1.6;
+}
+
+/* =============================
+   HEADER & NAVIGATION
+============================= */
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-style: italic;
+    font-size: 1.8rem;
+    color: black;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #8b0000; /* wine accent color */
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgba(255,255,255,0.95);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* =============================
+   GRID SECTIONS (Homepage)
+============================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 120px 20px 40px 20px; /* leave space for fixed header */
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.grid-item h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grid-item p {
+    color: #8b0000; /* wine accent for text */
+    font-weight: bold;
+}
+
+/* =============================
+   PRODUCT CARDS (ShopWithUs Page)
+============================= */
+.product-card {
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+/* =============================
+   CONTACT PAGE
+============================= */
+.contact-container {
+    max-width: 600px;
+    margin: 150px auto 50px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 10px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.95);
+    margin-top: 40px;
+}
+
+/* =============================
+   RESPONSIVE IMAGES
+============================= */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =============================
+   BUTTONS
+============================= */
+button {
+    background-color: #daa520; /* gold accent */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #c49e2c;
+}
+
+/* =============================
+   ADDITIONAL STYLING
+============================= */
+h2, h3, h4 {
+    color: #8b0000;
+}
