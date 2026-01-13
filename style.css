@@ -1,0 +1,166 @@
+/* =========================
+Aurapieces CSS – New Version
+Pinkish Background + Jewelry Watermark
+Responsive Design
+========================= */
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('images/jewelry-watermark.png') no-repeat center top;
+    background-size: cover;
+    background-color: #ffe6f0; /* soft pink background */
+    color: #000; /* black text for contrast */
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* translucent white */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* hidden on desktop */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #b0006d; /* wine/pink hover */
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 200px;
+        flex-direction: column;
+        background-color: rgba(255,255,255,0.95);
+        transition: right 0.3s ease;
+        height: calc(100vh - 60px);
+        padding: 20px;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+}
+
+/* Main Section */
+main {
+    padding-top: 90px; /* header offset */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Sections */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.grid .box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.grid .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.grid .box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.grid .box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.grid .box p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 50px 0 20px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: #b0006d; /* wine/pink */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff66b3;
+}
