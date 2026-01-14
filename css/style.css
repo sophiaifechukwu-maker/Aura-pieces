@@ -190,55 +190,5 @@ header {
 .shop-button:hover {
   background-color: #ff1493; /* darker pink on hover */
 }  
-/* ------------------ PLACEHOLDER GRID FIX ------------------ */
-.placeholders-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 per row if space allows, responsive */
-    gap: 20px; /* spacing between boxes */
-    margin-top: 20px;
-}
 
-.placeholder {
-    background-color: #f9f0f5; /* optional soft background for placeholders */
-    border-radius: 8px; /* rounded corners */
-    overflow: hidden; /* ensures images don’t spill out */
-    text-align: center; /* center any text if needed */
-    cursor: pointer; /* shows clickable */
-    transition: transform 0.2s ease; /* small hover effect */
-}
-
-.placeholder:hover {
-    transform: scale(1.03); /* subtle hover zoom */
-}
-
-.placeholder img {
-    width: 100%;     /* image fills box width */
-    height: 200px;   /* fixed height for consistency */
-    object-fit: cover; /* crops to fill box nicely */
-    display: block;   /* remove extra spacing below image */
-}
-
-.placeholder-title {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-}
-    /* Fix images to sit inside existing placeholders */
-.home-placeholder img {
-    width: 100%;           /* fills the box width */
-    height: 100%;          /* fills the box height */
-    object-fit: cover;     /* scales image without distortion */
-    display: block;
-    border-radius: 12px;   /* optional, matches box style */
-}
-
-.home-placeholder {
-    overflow: hidden;      /* prevents image spilling outside box */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-    
 }
