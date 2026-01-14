@@ -191,7 +191,6 @@ header {
   background-color: #ff1493; /* darker pink on hover */
 }  
 
-}
 /* Homepage placeholder images */
 .home-placeholders img {
     width: 100%;           /* Image fills the width of the placeholder box */
@@ -213,4 +212,17 @@ header {
     flex: 1 1 200px;       /* Each box takes minimum 200px, grows if space allows */
     max-width: 250px;      /* Optional: maximum width for each box */
     text-align: center;    /* Center titles or text inside the box */
+}
+.home-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* ensures it fills the box without stretching */
+}
+
+.home-placeholder {
+  width: 23%; /* 4 boxes in a row */
+  margin: 1%;
+  float: left;
+  text-align: center;
 }
