@@ -224,3 +224,21 @@ header {
     font-size: 16px;
     color: #333;
 }
+    /* Fix images to sit inside existing placeholders */
+.home-placeholder img {
+    width: 100%;           /* fills the box width */
+    height: 100%;          /* fills the box height */
+    object-fit: cover;     /* scales image without distortion */
+    display: block;
+    border-radius: 12px;   /* optional, matches box style */
+}
+
+.home-placeholder {
+    overflow: hidden;      /* prevents image spilling outside box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    
+}
