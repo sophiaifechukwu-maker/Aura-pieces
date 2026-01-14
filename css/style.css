@@ -192,3 +192,25 @@ header {
 }  
 
 }
+/* Homepage placeholder images */
+.home-placeholders img {
+    width: 100%;           /* Image fills the width of the placeholder box */
+    height: 200px;         /* Fixed height for all images; adjust as needed */
+    object-fit: cover;     /* Ensures image covers box without stretching */
+    display: block;        /* Removes any extra spacing below images */
+    border-radius: 8px;    /* Optional: rounded corners for a nicer look */
+}
+
+/* Optional: make placeholder boxes flex/grid aligned */
+.home-placeholders {
+    display: flex;
+    flex-wrap: wrap;       /* Allows multiple placeholders to wrap on smaller screens */
+    gap: 20px;             /* Space between each placeholder */
+    justify-content: center; /* Center the placeholders horizontally */
+}
+
+.home-placeholders .placeholder-box {
+    flex: 1 1 200px;       /* Each box takes minimum 200px, grows if space allows */
+    max-width: 250px;      /* Optional: maximum width for each box */
+    text-align: center;    /* Center titles or text inside the box */
+}
